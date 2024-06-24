@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+       
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/ListarCategoria"><i class="far fa-list-alt"></i> Listar categoria</a>
+         </li>        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ListarProducto"><i class="far fa-list-alt"></i> Lista Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/NuevoProducto"><i class="fas fa-plus-circle"></i> Nuevo Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/Nuevocategoria"><i class="fas fa-plus-circle"></i> Nuevo Categoria</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+  
+<div class="container">
+    <div class="card-body">
+        <h1 class="card-title">{{titulo}}</h1>
+        <form>
+            <div class="form-group row">
+                <label for="usuario" class="col-form-label col-sm-2">Nombre</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="name" [(ngModel)]="clausu.nombre">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-form-label col-sm-2">Marca</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="name" [(ngModel)]="clausu.marca">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-form-label col-sm-2">Precio</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="telefono" [(ngModel)]="clausu.precio">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-form-label col-sm-2">Stock</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="telefono" [(ngModel)]="clausu.stock">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-form-label col-sm-2">Categoria</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="telefono" [(ngModel)]="clausu.id_categoria">
+                </div>
+            </div>
+            <button class="btn btn-success" [routerLink]="['/ListarProducto']" role="button" (click)='create()'>Registrar</button>
+        </form>
+    </div>
+</div>
